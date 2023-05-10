@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張家祖廟虛擬實境</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+    pannellum.viewer('panorama', {   
+        "default": {
+            "firstScene": "入口",
+            "author": "資管四 B 高渝昕",
+            "sceneFadeDuration": 1000
+        },
+    
+        "scenes": {
+            "入口": {
+                "title": "張家祖廟入口",
+                "hfov": 120, //前後移動
+                "pitch": 5, //上下移動
+                "yaw": 0, //左右旋轉
+                "type": "equirectangular",
+                "panorama": "./imgs/A.jpg",
+                "autoLoad": true,
+                "hotSpots": [
+                    {
+                        "pitch": -8,
+                        "yaw": 3,
+                        "type": "scene",
+                        "text": "內入口步道",
+                        "sceneId": "內入口步道"
+                    }
+                ]
+            },
+    
+            "內入口步道": {
+                "title": "內入口步道",
+                "hfov": 110,
+                "type": "equirectangular",
+                "panorama": "./imgs/B.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -2,
+                        "yaw": -8,
+                        "type": "scene",
+                        "text": "外埕",
+                        "sceneId": "外埕"
+                    },
+
+                    {
+                        "pitch": -2,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "入口",
+                        "sceneId": "入口"
+                    }
+                ]
+            },
+
+            "外埕": {
+                "title": "外埕",
+                "hfov": 110,
+                "pitch": -3,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "./imgs/C.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -3,
+                        "yaw": 208,
+                        "type": "scene",
+                        "text": "內入口步道",
+                        "sceneId": "內入口步道"
+                    },
+
+                    {
+                        "pitch": -5,
+                        "yaw": -18,
+                        "type": "scene",
+                        "text": "外埕2",
+                        "sceneId": "外埕2"
+                    },
+                ]
+            },
+
+            "外埕2": {
+                "title": "外埕2",
+                "hfov": 130,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "./imgs/C2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0, 
+                        "yaw": -46,
+                        "type": "scene",
+                        "text": "左護龍",
+                        "sceneId": "左護龍"
+                    },
+
+                    {
+                        "pitch": 0,
+                        "yaw": 1,
+                        "type": "scene",
+                        "text": "內埕",
+                        "sceneId": "內埕"
+                    },
+
+                    {
+                        "pitch": 0,
+                        "yaw": 48,
+                        "type": "scene",
+                        "text": "右護龍",
+                        "sceneId": "右護龍"
+                    }
+                ]
+            },
+
+            "右護龍": {
+                "title": "右護龍",
+                "hfov": 110,
+                "pitch": 0,
+                "yaw": -7,
+                "type": "equirectangular",
+                "panorama": "./imgs/D.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw":-3.5,
+                        "type": "scene",
+                        "text": "外埕2",
+                        "sceneId": "外埕2"
+                    },
+
+                    {
+                        "pitch": -5,
+                        "yaw":82,
+                        "type": "scene",
+                        "text": "內埕",
+                        "sceneId": "內埕"
+                    }
+                ]
+            },
+
+            "左護龍": {
+                "title": "左護龍",
+                "hfov": 110,
+                "pitch": -3,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "./imgs/E.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw":-0.5,
+                        "type": "scene",
+                        "text": "外埕2",
+                        "sceneId": "外埕2"
+                    },
+
+                    {
+                        "pitch": -3,
+                        "yaw":-110,
+                        "type": "scene",
+                        "text": "內埕",
+                        "sceneId": "內埕"
+                    }
+                ]
+            },
+
+            "內埕": {
+                "title": "內埕",
+                "hfov": 120,
+                "pitch": 5,
+                "yaw": -2,
+                "type": "equirectangular",
+                "panorama": "./imgs/F.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0, 
+                        "yaw": -58,
+                        "type": "scene",
+                        "text": "左護龍",
+                        "sceneId": "左護龍"
+                    },
+
+                    {
+                        "pitch": 3,
+                        "yaw": 52,
+                        "type": "scene",
+                        "text": "右護龍",
+                        "sceneId": "右護龍"
+                    }
+                ]
+            }
+        }
+    });
+    </script>
+</body>
+</html>
